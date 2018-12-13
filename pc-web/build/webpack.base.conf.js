@@ -1,15 +1,12 @@
 'use strict'
-// **获取项目名称**
-var args = "htxt-trj";
-
-
-global.APP_PROJECT_NAME = args;
 
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const { VueLoaderPlugin } = require('vue-loader')
 const vueLoaderConfig = require('./vue-loader.conf')
+// **获取项目名称**
+global.APP_PROJECT_NAME = config.system.system_name;
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
