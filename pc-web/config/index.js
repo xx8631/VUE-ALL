@@ -44,10 +44,10 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../dist/'+global.APP_PROJECT_NAME+'/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../dist'+global.APP_PROJECT_NAME),
     assetsSubDirectory: 'static',
 
     /**
@@ -82,5 +82,6 @@ module.exports = {
 
     // `npm run build:prod --generate_report`
     generateAnalyzerReport: process.env.npm_config_generate_report || false
-  }
+  },
+  system:"htxt-trj"
 }
